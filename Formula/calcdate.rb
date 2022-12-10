@@ -5,50 +5,50 @@
 class Calcdate < Formula
   desc ""
   homepage "https://github.com/sgaunet/homebrew-tools"
-  version "1.1.2"
+  version "1.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/calcdate/releases/download/v1.1.2/calcdate_1.1.2_Darwin_arm64"
-      sha256 "8889d59c8ecb1411d278168348c0051cdb62fc27fea7103ff66c18ee7ec99907"
+      url "https://github.com/sgaunet/calcdate/releases/download/v1.2.0/calcdate_1.2.0_Darwin_arm64"
+      sha256 "f36962af0b6964625866cf70970c11e711ac66888abecc0f0b3b4b56efc03be0"
 
       def install
-        bin.install "calcdate_1.1.2_Darwin_arm64" => "calcdate"
+        bin.install "calcdate_1.2.0_Darwin_arm64" => "calcdate"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/calcdate/releases/download/v1.1.2/calcdate_1.1.2_Darwin_x86_64"
-      sha256 "b490d9abf130948004bcf8adca83bbb5064246a69f0ad72bb94da539287c0dfc"
+      url "https://github.com/sgaunet/calcdate/releases/download/v1.2.0/calcdate_1.2.0_Darwin_x86_64"
+      sha256 "5916add99697379394e30bba2c76b09760f9180e101d69f6d14ffc1bf91c52f4"
 
       def install
-        bin.install "calcdate_1.1.2_Darwin_x86_64" => "calcdate"
+        bin.install "calcdate_1.2.0_Darwin_x86_64" => "calcdate"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/calcdate/releases/download/v1.1.2/calcdate_1.1.2_Linux_armv6"
-      sha256 "6cef6c277014f0328c230895ffa06e8db419aba02058d04a3131010e5d35338e"
+    if Hardware::CPU.intel?
+      url "https://github.com/sgaunet/calcdate/releases/download/v1.2.0/calcdate_1.2.0_Linux_x86_64"
+      sha256 "8fda1a22d44835da1c9b4d671a3c6a6cbe0357debbb87546fa59cbda197c83a6"
 
       def install
-        bin.install "calcdate_1.1.2_Linux_armv6" => "calcdate"
+        bin.install "calcdate_1.2.0_Linux_x86_64" => "calcdate"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/sgaunet/calcdate/releases/download/v1.2.0/calcdate_1.2.0_Linux_armv6"
+      sha256 "d0bb9bf123fe92437ef6286f2828add19684a6d7af7a16b171367bca89d1ffb1"
+
+      def install
+        bin.install "calcdate_1.2.0_Linux_armv6" => "calcdate"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/calcdate/releases/download/v1.1.2/calcdate_1.1.2_Linux_arm64"
-      sha256 "ffb6df73bc0323807efaa1d563afba50a973ce1f6b61c8c36517e1b5c44acaf2"
+      url "https://github.com/sgaunet/calcdate/releases/download/v1.2.0/calcdate_1.2.0_Linux_arm64"
+      sha256 "ad1afcaf2c797955bb29995e5a22dbb192821950d1efe6a9d82c11c3189862f0"
 
       def install
-        bin.install "calcdate_1.1.2_Linux_arm64" => "calcdate"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/calcdate/releases/download/v1.1.2/calcdate_1.1.2_Linux_x86_64"
-      sha256 "6411b5e0f53937c6f0e8eb3529d4e9fde477b717b2cc4dd0a2cf88d731185289"
-
-      def install
-        bin.install "calcdate_1.1.2_Linux_x86_64" => "calcdate"
+        bin.install "calcdate_1.2.0_Linux_arm64" => "calcdate"
       end
     end
   end
