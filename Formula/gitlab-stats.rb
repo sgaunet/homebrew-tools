@@ -5,32 +5,32 @@
 class GitlabStats < Formula
   desc ""
   homepage "https://github.com/sgaunet/homebrew-tools"
-  version "0.1.0"
+  version "0.1.1"
   depends_on :linux
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitlab-stats/releases/download/v0.1.0/gitlab-stats_0.1.0_linux_armv6"
-      sha256 "cb6dcf5baff5de7d4f337e9a36a34983519204fc440d101082302f04b59b2771"
-
-      def install
-        bin.install "gitlab-stats_0.1.0_linux_armv6" => "gitlab-stats"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/gitlab-stats/releases/download/v0.1.0/gitlab-stats_0.1.0_linux_amd64"
-      sha256 "02ddd24b688936bd4d39afbbc5027e3888baea8baba876d754aeab109bf1eb1b"
+      url "https://github.com/sgaunet/gitlab-stats/releases/download/v0.1.1/gitlab-stats_0.1.1_linux_amd64"
+      sha256 "2ac9f5550c1b6f26f126bf9b011f72cf3f6f8598610ca9c6a6e4afb13fbc0c5a"
 
       def install
-        bin.install "gitlab-stats_0.1.0_linux_amd64" => "gitlab-stats"
+        bin.install "gitlab-stats_0.1.1_linux_amd64" => "gitlab-stats"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitlab-stats/releases/download/v0.1.0/gitlab-stats_0.1.0_linux_arm64"
-      sha256 "568921b6d9a13fe552699629e7c9aed1d29c61029abb0d1bb18068c319532909"
+      url "https://github.com/sgaunet/gitlab-stats/releases/download/v0.1.1/gitlab-stats_0.1.1_linux_arm64"
+      sha256 "88172dda8e65ac54a8a93b7afb244a504cadcbad5c0659b51c63fed62dc3430b"
 
       def install
-        bin.install "gitlab-stats_0.1.0_linux_arm64" => "gitlab-stats"
+        bin.install "gitlab-stats_0.1.1_linux_arm64" => "gitlab-stats"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/sgaunet/gitlab-stats/releases/download/v0.1.1/gitlab-stats_0.1.1_linux_armv6"
+      sha256 "108dc264e76f1d8db7ac078df796b33d95a9945b1f71856f9c0ec4efae5b82bf"
+
+      def install
+        bin.install "gitlab-stats_0.1.1_linux_armv6" => "gitlab-stats"
       end
     end
   end
