@@ -5,21 +5,21 @@
 class Envtemplate < Formula
   desc ""
   homepage "https://github.com/sgaunet/homebrew-tools"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/envtemplate/releases/download/v0.1.0/envtemplate_0.1.0_darwin_amd64"
-      sha256 "ef1591e77d5b81cf607ad10c9e95ec7a009a2db07dbb28f6916fc7a857ed27c6"
+      url "https://github.com/sgaunet/envtemplate/releases/download/v0.2.0/envtemplate_0.2.0_darwin_amd64"
+      sha256 "edf53e179ffa8cd7ebca2c3ec6deba439040da0dcb08d6349d8a5ed69cb62d4b"
 
       def install
         bin.install "envtemplate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/envtemplate/releases/download/v0.1.0/envtemplate_0.1.0_darwin_arm64"
-      sha256 "2553b2de4eb32f7bd0e1aca18c35dba00b7d4b840cc7342c046b7c7395511efd"
+      url "https://github.com/sgaunet/envtemplate/releases/download/v0.2.0/envtemplate_0.2.0_darwin_arm64"
+      sha256 "e63b5b122fbd2fed95d53c37d5269b74a912d6a27e30c8c56f38148feb017f02"
 
       def install
         bin.install "envtemplate"
@@ -29,24 +29,24 @@ class Envtemplate < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/envtemplate/releases/download/v0.1.0/envtemplate_0.1.0_linux_arm64"
-      sha256 "b8876d7e06a47b133673b60d4915384a9526ff937886b5c4885c8c8414215e7f"
-
-      def install
-        bin.install "envtemplate"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/envtemplate/releases/download/v0.1.0/envtemplate_0.1.0_linux_amd64"
-      sha256 "b1b85fd8e93b18ade5e6793a36b537378de231a8aa085bf6276592cebebca64f"
+      url "https://github.com/sgaunet/envtemplate/releases/download/v0.2.0/envtemplate_0.2.0_linux_arm64"
+      sha256 "1a55928ac3b629f118b3e23fa7d74474405f7a5f0bca55df30e897a742de07e9"
 
       def install
         bin.install "envtemplate"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/envtemplate/releases/download/v0.1.0/envtemplate_0.1.0_linux_armv6"
-      sha256 "f34b2620202cf8e61dc05da7f43440bcf09af362e914c28663c5f31798f4375f"
+      url "https://github.com/sgaunet/envtemplate/releases/download/v0.2.0/envtemplate_0.2.0_linux_armv6"
+      sha256 "97ea4a4ccac3fb3d9e42df6ca68afbb964da71a93d07a791474d740bdb57987a"
+
+      def install
+        bin.install "envtemplate"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/sgaunet/envtemplate/releases/download/v0.2.0/envtemplate_0.2.0_linux_amd64"
+      sha256 "5cd0e4226259fb7df4cebca74d7b6568ce3bf20b441a23a42a01873e4dce0cc6"
 
       def install
         bin.install "envtemplate"
