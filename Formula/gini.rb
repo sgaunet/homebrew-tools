@@ -5,50 +5,50 @@
 class Gini < Formula
   desc ""
   homepage "https://github.com/sgaunet/homebrew-tools"
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/gini/releases/download/v0.3.0/gini_0.3.0_darwin_amd64"
-      sha256 "0e8aabc501fb96c6778a8c3f8bc9423187ab7b530300a1d0a5c82ba727b34908"
+      url "https://github.com/sgaunet/gini/releases/download/v0.3.1/gini_0.3.1_darwin_amd64"
+      sha256 "c18565d212576278a22ece663952996a31a1e550a3425ade8b5e9d922cea8c02"
 
       def install
-        bin.install "gini_0.3.0_darwin_amd64" => "gini"
+        bin.install "gini_0.3.1_darwin_amd64" => "gini"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/gini/releases/download/v0.3.0/gini_0.3.0_darwin_arm64"
-      sha256 "f40655a4b3ea6d3df30562ac6bdc15c32a0587d719208f0fe19e12949084cbcd"
+      url "https://github.com/sgaunet/gini/releases/download/v0.3.1/gini_0.3.1_darwin_arm64"
+      sha256 "611fb091399114cdbc253416e2cf8809701241d5f53f253d58db373fe56d1ee2"
 
       def install
-        bin.install "gini_0.3.0_darwin_arm64" => "gini"
+        bin.install "gini_0.3.1_darwin_arm64" => "gini"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gini/releases/download/v0.3.0/gini_0.3.0_linux_arm64"
-      sha256 "f8fedb6c6ca3cdeaec8e4a8963aa505725ebd12fba7edbc6395489c7b8e6480e"
+    if Hardware::CPU.intel?
+      url "https://github.com/sgaunet/gini/releases/download/v0.3.1/gini_0.3.1_linux_amd64"
+      sha256 "80241eda7ade9969d8900c493ab3562c87472cdb5d075b59b960090dd4436a06"
 
       def install
-        bin.install "gini_0.3.0_linux_arm64" => "gini"
+        bin.install "gini_0.3.1_linux_amd64" => "gini"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sgaunet/gini/releases/download/v0.3.1/gini_0.3.1_linux_arm64"
+      sha256 "eb62eca7f0ab134be2c5eb81ce2206b75ef27c059b69fa1a36a20ea1770c7434"
+
+      def install
+        bin.install "gini_0.3.1_linux_arm64" => "gini"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gini/releases/download/v0.3.0/gini_0.3.0_linux_armv6"
-      sha256 "6c24e7d3c283e6c59ede21e29e178a4cbb559a32837a3b385865d92c2420d0c8"
+      url "https://github.com/sgaunet/gini/releases/download/v0.3.1/gini_0.3.1_linux_armv6"
+      sha256 "368a7b4f41e04da674e428e8f80d7ed27d97e691ad7f9ec68a806a1586d1e736"
 
       def install
-        bin.install "gini_0.3.0_linux_armv6" => "gini"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/gini/releases/download/v0.3.0/gini_0.3.0_linux_amd64"
-      sha256 "a1670d56107662ece15eda1103de9b4528930d6cc45635704cb16664837dbc56"
-
-      def install
-        bin.install "gini_0.3.0_linux_amd64" => "gini"
+        bin.install "gini_0.3.1_linux_armv6" => "gini"
       end
     end
   end
