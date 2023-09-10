@@ -5,32 +5,50 @@
 class GitlabStats < Formula
   desc ""
   homepage "https://github.com/sgaunet/homebrew-tools"
-  version "0.1.1"
-  depends_on :linux
+  version "1.0.0"
 
-  on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/gitlab-stats/releases/download/v0.1.1/gitlab-stats_0.1.1_linux_amd64"
-      sha256 "2ac9f5550c1b6f26f126bf9b011f72cf3f6f8598610ca9c6a6e4afb13fbc0c5a"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/sgaunet/gitlab-stats/releases/download/v1.0.0/gitlab-stats_1.0.0_darwin_arm64"
+      sha256 "8911ee93d76773765eab8c9ea8dcf88d110b2cf971d24ee3faceada17c59b3ea"
 
       def install
-        bin.install "gitlab-stats_0.1.1_linux_amd64" => "gitlab-stats"
+        bin.install "gitlab-stats"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/sgaunet/gitlab-stats/releases/download/v1.0.0/gitlab-stats_1.0.0_darwin_amd64"
+      sha256 "16925b9d94ad455e9d8151013fadc15034b9258a551f8eabb6414066764d240b"
+
+      def install
+        bin.install "gitlab-stats"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/sgaunet/gitlab-stats/releases/download/v1.0.0/gitlab-stats_1.0.0_linux_armv6"
+      sha256 "642fc7a4edcb6034cd92a6089d275d8f1f5bef8c99e4bea656910d483748ffb1"
+
+      def install
+        bin.install "gitlab-stats"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitlab-stats/releases/download/v0.1.1/gitlab-stats_0.1.1_linux_arm64"
-      sha256 "88172dda8e65ac54a8a93b7afb244a504cadcbad5c0659b51c63fed62dc3430b"
+      url "https://github.com/sgaunet/gitlab-stats/releases/download/v1.0.0/gitlab-stats_1.0.0_linux_arm64"
+      sha256 "ed20aa9b872602e3b970aee73771cedafbfd99a455811fe59a60b5b4eb8997db"
 
       def install
-        bin.install "gitlab-stats_0.1.1_linux_arm64" => "gitlab-stats"
+        bin.install "gitlab-stats"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitlab-stats/releases/download/v0.1.1/gitlab-stats_0.1.1_linux_armv6"
-      sha256 "108dc264e76f1d8db7ac078df796b33d95a9945b1f71856f9c0ec4efae5b82bf"
+    if Hardware::CPU.intel?
+      url "https://github.com/sgaunet/gitlab-stats/releases/download/v1.0.0/gitlab-stats_1.0.0_linux_amd64"
+      sha256 "dfd9051a17ba55deaa3d152ed7aa6868f54a36712aa24f3da2b630e450e40aa6"
 
       def install
-        bin.install "gitlab-stats_0.1.1_linux_armv6" => "gitlab-stats"
+        bin.install "gitlab-stats"
       end
     end
   end
