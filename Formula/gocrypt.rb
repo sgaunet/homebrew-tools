@@ -5,12 +5,12 @@
 class Gocrypt < Formula
   desc ""
   homepage "https://github.com/sgaunet/homebrew-tools"
-  version "0.4.3"
+  version "1.0.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/gocrypt/releases/download/v0.4.3/gocrypt_0.4.3_darwin_arm64"
-      sha256 "39d4d01c2a27ac25245ffd40a720f544ead9a44cb3316adfa4ec5dddebdcaacb"
+      url "https://github.com/sgaunet/gocrypt/releases/download/v1.0.0/gocrypt_1.0.0_darwin_arm64"
+      sha256 "00b9b546580ae32a7dd259453e65bdd08508c66ac231b98fe3643b9278152477"
 
       def install
         bin.install "gocrypt"
@@ -19,8 +19,8 @@ class Gocrypt < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/gocrypt/releases/download/v0.4.3/gocrypt_0.4.3_darwin_amd64"
-      sha256 "6d88c22bdbbb296a14e8771eb86606111fc476aad8b310be6a711ab5108bd1cb"
+      url "https://github.com/sgaunet/gocrypt/releases/download/v1.0.0/gocrypt_1.0.0_darwin_amd64"
+      sha256 "50644d6ebb59e7f1c31062cc3ae71f7202fa16aa66d8a7a291a87ddec3cde4ec"
 
       def install
         bin.install "gocrypt"
@@ -31,9 +31,9 @@ class Gocrypt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gocrypt/releases/download/v0.4.3/gocrypt_0.4.3_linux_armv6"
-      sha256 "1bfd9705901031edb3e92d32804a85f327c0421e6046edfecc76f9e3e37c3e34"
+    if Hardware::CPU.intel?
+      url "https://github.com/sgaunet/gocrypt/releases/download/v1.0.0/gocrypt_1.0.0_linux_amd64"
+      sha256 "3266835d55f45e1142331e72e5ebe3e4ed28efb6b566590a97004497aa1a5602"
 
       def install
         bin.install "gocrypt"
@@ -41,9 +41,9 @@ class Gocrypt < Formula
         # ...
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/gocrypt/releases/download/v0.4.3/gocrypt_0.4.3_linux_amd64"
-      sha256 "4ccfb2d3b25ef0828d27c8f90c4b0b1c04f3c1bef8b1e39bf49f2959d0e0f763"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/sgaunet/gocrypt/releases/download/v1.0.0/gocrypt_1.0.0_linux_armv6"
+      sha256 "3c36ea7165dc583047628653a93613291b243317e537a6e0d17170f5d27e9964"
 
       def install
         bin.install "gocrypt"
@@ -52,8 +52,8 @@ class Gocrypt < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gocrypt/releases/download/v0.4.3/gocrypt_0.4.3_linux_arm64"
-      sha256 "3d119c06a3b53a680b673b98b7c505236c52cd6c94feba52ac82dd76bae04f7c"
+      url "https://github.com/sgaunet/gocrypt/releases/download/v1.0.0/gocrypt_1.0.0_linux_arm64"
+      sha256 "89c226af5e519b6ebf0e72c056e1e7a4bdd51183423a2b09a9ee9fedcea269ba"
 
       def install
         bin.install "gocrypt"
