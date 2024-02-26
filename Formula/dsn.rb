@@ -5,50 +5,50 @@
 class Dsn < Formula
   desc ""
   homepage "https://github.com/sgaunet/homebrew-tools"
-  version "2.0.2"
+  version "2.1.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/dsn/releases/download/v2.0.2/dsn_2.0.2_darwin_amd64"
-      sha256 "e850b2b9ad83ae6adc8586de2e307de7c4c81fa63f0185cc68fc7f3df3ffa950"
+    if Hardware::CPU.arm?
+      url "https://github.com/sgaunet/dsn/releases/download/v2.1.0/dsn_2.1.0_darwin_arm64"
+      sha256 "bbfa62774903e1bae26585a04bd4f450a11afa71b6d626630e1050b2a9f0cf95"
 
       def install
-        bin.install "dsn_2.0.2_darwin_amd64" => "dsn"
+        bin.install "dsn_2.1.0_darwin_arm64" => "dsn"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/dsn/releases/download/v2.0.2/dsn_2.0.2_darwin_arm64"
-      sha256 "05cb80a8092315d2983ee78d427e1851fa92e8bf352f209e8914c46975d80e83"
+    if Hardware::CPU.intel?
+      url "https://github.com/sgaunet/dsn/releases/download/v2.1.0/dsn_2.1.0_darwin_amd64"
+      sha256 "795e641700bc475951dcc2057446e5abce093b515d70cc464fb8c78fa04e56cf"
 
       def install
-        bin.install "dsn_2.0.2_darwin_arm64" => "dsn"
+        bin.install "dsn_2.1.0_darwin_amd64" => "dsn"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/dsn/releases/download/v2.0.2/dsn_2.0.2_linux_armv6"
-      sha256 "4f500cf6d5901e60c506aad8abad126e6c95ca9a0458bc287c81f2f5fc45d9e8"
+      url "https://github.com/sgaunet/dsn/releases/download/v2.1.0/dsn_2.1.0_linux_armv6"
+      sha256 "992a57f298c67d57f6bb76f4aecb05f98df10bb6208041ca4f8699ad8b9acbb4"
 
       def install
-        bin.install "dsn_2.0.2_linux_armv6" => "dsn"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/dsn/releases/download/v2.0.2/dsn_2.0.2_linux_amd64"
-      sha256 "b4d8c6400098ad0bc1a46746d03fac3958ca90179c11a0541c975988fc67a2c3"
-
-      def install
-        bin.install "dsn_2.0.2_linux_amd64" => "dsn"
+        bin.install "dsn_2.1.0_linux_armv6" => "dsn"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/dsn/releases/download/v2.0.2/dsn_2.0.2_linux_arm64"
-      sha256 "35ae4f10de3025618967fc46c6debf671599ba312a1da3070aa0e9e140253674"
+      url "https://github.com/sgaunet/dsn/releases/download/v2.1.0/dsn_2.1.0_linux_arm64"
+      sha256 "30a612ff2677ab8d2b0bb541a89c0697efae20c0e09e837dd411e95894cd8e44"
 
       def install
-        bin.install "dsn_2.0.2_linux_arm64" => "dsn"
+        bin.install "dsn_2.1.0_linux_arm64" => "dsn"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/sgaunet/dsn/releases/download/v2.1.0/dsn_2.1.0_linux_amd64"
+      sha256 "6976c1bc7492d34ce33523f80806aee618a1ea98737fb426a5b9e160ba123119"
+
+      def install
+        bin.install "dsn_2.1.0_linux_amd64" => "dsn"
       end
     end
   end
