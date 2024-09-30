@@ -5,36 +5,36 @@
 class DockerAuth < Formula
   desc ""
   homepage "https://github.com/sgaunet/homebrew-tools"
-  version "0.1.0-beta1"
+  version "0.1.0"
   depends_on :linux
 
   on_intel do
     if Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/docker-auth/releases/download/v0.1.0-beta1/docker-auth_0.1.0-beta1_linux_amd64"
-      sha256 "7366a77c8c13c1b115804ed761c4e36d8cf29d904f147a3b2ba0ed429c2330dd"
+      url "https://github.com/sgaunet/docker-auth/releases/download/v0.1.0/docker-auth_0.1.0_linux_amd64"
+      sha256 "5056546fb2c646373f4fb7362e715dcc1be4be78c804afabe7f5cb18c4322408"
 
       def install
-        bin.install "docker-auth_0.1.0-beta1_linux_amd64" => "docker-auth"
+        bin.install "docker-auth_0.1.0_linux_amd64" => "docker-auth"
       end
     end
   end
   on_arm do
     if !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/docker-auth/releases/download/v0.1.0-beta1/docker-auth_0.1.0-beta1_linux_armv6"
-      sha256 "c7fcd40e641d072b586ec73a7120b8c4ab39c8c7015392dd223045ff14135e8f"
+      url "https://github.com/sgaunet/docker-auth/releases/download/v0.1.0/docker-auth_0.1.0_linux_armv6"
+      sha256 "447d126f7c43dbafd7dbfdc7681b1bb6441a0b24e5a3dc40d7307e6349583841"
 
       def install
-        bin.install "docker-auth_0.1.0-beta1_linux_armv6" => "docker-auth"
+        bin.install "docker-auth_0.1.0_linux_armv6" => "docker-auth"
       end
     end
   end
   on_arm do
     if Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/docker-auth/releases/download/v0.1.0-beta1/docker-auth_0.1.0-beta1_linux_arm64"
-      sha256 "eb959b087308ae2a4341050eb85c692805eebc0c77264d8a8337ae9d6f53b7e2"
+      url "https://github.com/sgaunet/docker-auth/releases/download/v0.1.0/docker-auth_0.1.0_linux_arm64"
+      sha256 "ddd415193f0222fe4aade4ed44bb22128bd3a5efd57cb00fa13588fb4a26c413"
 
       def install
-        bin.install "docker-auth_0.1.0-beta1_linux_arm64" => "docker-auth"
+        bin.install "docker-auth_0.1.0_linux_arm64" => "docker-auth"
       end
     end
   end
