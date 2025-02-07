@@ -5,23 +5,23 @@
 class Pplx < Formula
   desc ""
   homepage "https://github.com/sgaunet/homebrew-tools"
-  version "0.1.2"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/pplx/releases/download/v0.1.2/pplx_0.1.2_darwin_amd64"
-      sha256 "e8bc2b5a12f1b27c8c76bf2839abf5100150371bd798c5ed7ce20a708096c059"
+      url "https://github.com/sgaunet/pplx/releases/download/v0.2.0/pplx_0.2.0_darwin_amd64"
+      sha256 "dd0ec8edda6a20a6e1e3c6801a437f085d7979edf3ef8632746eb80c7b4f76da"
 
       def install
-        bin.install "pplx_0.1.2_darwin_amd64" => "pplx"
+        bin.install "pplx_0.2.0_darwin_amd64" => "pplx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/pplx/releases/download/v0.1.2/pplx_0.1.2_darwin_arm64"
-      sha256 "cb792527262e087ec10b008a5282c88ce03625c061369bb5a83b807a63608326"
+      url "https://github.com/sgaunet/pplx/releases/download/v0.2.0/pplx_0.2.0_darwin_arm64"
+      sha256 "c68658d472bb5b02ddf2ecb31cb97f7c168a8d316b7816c5dfea23d145c2e906"
 
       def install
-        bin.install "pplx_0.1.2_darwin_arm64" => "pplx"
+        bin.install "pplx_0.2.0_darwin_arm64" => "pplx"
       end
     end
   end
@@ -29,31 +29,31 @@ class Pplx < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sgaunet/pplx/releases/download/v0.1.2/pplx_0.1.2_linux_amd64"
-        sha256 "e35d183161999d2d6ce98d9284074159d294f888d54c07f9a45aca4ee3de0726"
+        url "https://github.com/sgaunet/pplx/releases/download/v0.2.0/pplx_0.2.0_linux_amd64"
+        sha256 "855571f8ef05de87c959a734da158eb561d7e23bf04afcb0a932a2cc259634d9"
 
         def install
-          bin.install "pplx_0.1.2_linux_amd64" => "pplx"
+          bin.install "pplx_0.2.0_linux_amd64" => "pplx"
         end
       end
     end
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/sgaunet/pplx/releases/download/v0.1.2/pplx_0.1.2_linux_armv6"
-        sha256 "0a3a6256b0a1b15bc05e8f4bd935c04aeb27b20c5b1c76203ede8c9f7ee7b352"
+        url "https://github.com/sgaunet/pplx/releases/download/v0.2.0/pplx_0.2.0_linux_armv6"
+        sha256 "6656ca99415ff92df94ec899a04968e3f1a1c603f319fc691759f7561275fa26"
 
         def install
-          bin.install "pplx_0.1.2_linux_armv6" => "pplx"
+          bin.install "pplx_0.2.0_linux_armv6" => "pplx"
         end
       end
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sgaunet/pplx/releases/download/v0.1.2/pplx_0.1.2_linux_arm64"
-        sha256 "7bb9d4644eaa2369553c2ac355e96d42e1ec0849f751f8fd95246278fe40589d"
+        url "https://github.com/sgaunet/pplx/releases/download/v0.2.0/pplx_0.2.0_linux_arm64"
+        sha256 "1150e1780063e786605ffbf421c32f0d298ea53aa519cf42c77e981ecd64160d"
 
         def install
-          bin.install "pplx_0.1.2_linux_arm64" => "pplx"
+          bin.install "pplx_0.2.0_linux_arm64" => "pplx"
         end
       end
     end
