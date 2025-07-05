@@ -5,20 +5,20 @@
 class GitlabBackup < Formula
   desc "A tool for backing up GitLab projects"
   homepage "https://github.com/sgaunet/gitlab-backup"
-  version "1.12.1"
+  version "1.13.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/gitlab-backup/releases/download/v1.12.1/gitlab-backup_1.12.1_darwin_amd64"
-      sha256 "1be87df21bc4618d5a6853328ac70867c3e81561e9b779f36c5d8032e2047657"
+      url "https://github.com/sgaunet/gitlab-backup/releases/download/v1.13.0/gitlab-backup_1.13.0_darwin_amd64"
+      sha256 "6809f3045d481ddfd4fa8a2f2cba4e75098b6f5f3d2f18714aff30772753f483"
 
       def install
         bin.install "gitlab-backup"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/gitlab-backup/releases/download/v1.12.1/gitlab-backup_1.12.1_darwin_arm64"
-      sha256 "0cd1fc8c12732ebd30bea625ffe7b20edf2228b8ea5fe5e7e48ad58433148f3b"
+      url "https://github.com/sgaunet/gitlab-backup/releases/download/v1.13.0/gitlab-backup_1.13.0_darwin_arm64"
+      sha256 "c14afb1723a244be8762c4eb5fea0d2e8ccf5e7744ae7f3bc0345446b48f863d"
 
       def install
         bin.install "gitlab-backup"
@@ -28,22 +28,22 @@ class GitlabBackup < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitlab-backup/releases/download/v1.12.1/gitlab-backup_1.12.1_linux_amd64"
-      sha256 "7a9bb251c6838d0e15e58f1db1baaf86bcc72351729f39b2997f31199e59f4d2"
+      url "https://github.com/sgaunet/gitlab-backup/releases/download/v1.13.0/gitlab-backup_1.13.0_linux_amd64"
+      sha256 "c387746cac8b1cd4ee4c0a0e0a405524f014b320507a5db846abe313988734d4"
       def install
         bin.install "gitlab-backup"
       end
     end
     if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitlab-backup/releases/download/v1.12.1/gitlab-backup_1.12.1_linux_armv6"
-      sha256 "e85d6ea3ebc44e78823f0ea7176cbd9575c37d3caf83310f4316c5cb980f7bb8"
+      url "https://github.com/sgaunet/gitlab-backup/releases/download/v1.13.0/gitlab-backup_1.13.0_linux_armv6"
+      sha256 "a8c7059c3aeaef45996419869da729a1ad3bdcb89ce8366e18c52ea022488f2f"
       def install
         bin.install "gitlab-backup"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitlab-backup/releases/download/v1.12.1/gitlab-backup_1.12.1_linux_arm64"
-      sha256 "366cb77b5e14057a4db9918a5e488560fbce59469a54af6ff1871eaf7143fd59"
+      url "https://github.com/sgaunet/gitlab-backup/releases/download/v1.13.0/gitlab-backup_1.13.0_linux_arm64"
+      sha256 "2b18cf34d7c6a287a317dd3904a5ce238bd95c3d04986d8707be649a9c8d20cf"
       def install
         bin.install "gitlab-backup"
       end
