@@ -5,47 +5,47 @@
 class Mdtohtml < Formula
   desc "A simple and efficient Markdown to HTML converter"
   homepage "https://github.com/sgaunet/mdtohtml"
-  version "1.1.0"
+  version "1.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/mdtohtml/releases/download/v1.1.0/mdtohtml_1.1.0_darwin_amd64.tar.gz"
-      sha256 "56c4089bc5e2c6c667f2b77a3aaa25b4b6d95c2e0abcfe2e4e916402e42a209c"
+      url "https://github.com/sgaunet/mdtohtml/releases/download/v1.1.1/mdtohtml_1.1.1_darwin_amd64.tar.gz"
+      sha256 "0fb8c7fca8e0f19292d8322825c86e50c385ede8a090ad8333126dbd987affb3"
 
       def install
-        bin.install "mdtohtml"
+        bin.install "mdtohtml_1.1.1_darwin_amd64.tar.gz" => "mdtohtml"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/mdtohtml/releases/download/v1.1.0/mdtohtml_1.1.0_darwin_arm64.tar.gz"
-      sha256 "20c18cedaf216a767e514320e65c8709be5bf93fa5f63f7c5937fbf0200ddf3a"
+      url "https://github.com/sgaunet/mdtohtml/releases/download/v1.1.1/mdtohtml_1.1.1_darwin_arm64.tar.gz"
+      sha256 "ca92687ba5af1c08e350d4805fa6d1086d0547fe061a54c454ca68266fc0c07b"
 
       def install
-        bin.install "mdtohtml"
+        bin.install "mdtohtml_1.1.1_darwin_arm64.tar.gz" => "mdtohtml"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/mdtohtml/releases/download/v1.1.0/mdtohtml_1.1.0_linux_amd64.tar.gz"
-      sha256 "21db64dbe59a15d4e1c64cd6232db0fac7b7d049ed59dd0828f09f4825c49d42"
+      url "https://github.com/sgaunet/mdtohtml/releases/download/v1.1.1/mdtohtml_1.1.1_linux_amd64.tar.gz"
+      sha256 "b681c6a59fb3022a5005803884ca18e0576a25a0606bd92567776cb6f5af1c13"
       def install
-        bin.install "mdtohtml"
+        bin.install "mdtohtml_1.1.1_linux_amd64.tar.gz" => "mdtohtml"
       end
     end
     if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/mdtohtml/releases/download/v1.1.0/mdtohtml_1.1.0_linux_armv6.tar.gz"
-      sha256 "7c342772f7cad1ed18dfabddfc2eeb616f822975f87e7a4a765326ce95f15a01"
+      url "https://github.com/sgaunet/mdtohtml/releases/download/v1.1.1/mdtohtml_1.1.1_linux_armv6.tar.gz"
+      sha256 "2f6dc1cde49dfb0427d53f078f072d9461c9fa98d718a3d3865ceea0e5671156"
       def install
-        bin.install "mdtohtml"
+        bin.install "mdtohtml_1.1.1_linux_armv6.tar.gz" => "mdtohtml"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/mdtohtml/releases/download/v1.1.0/mdtohtml_1.1.0_linux_arm64.tar.gz"
-      sha256 "098516c16ff0448bbc7a358f3dbe2b167eeb50d256dad01698f0048cf946dc3e"
+      url "https://github.com/sgaunet/mdtohtml/releases/download/v1.1.1/mdtohtml_1.1.1_linux_arm64.tar.gz"
+      sha256 "7c817adcae82d3af8792b47a36f90b65c7d0e71a1b697c6ce82e8854879d3ead"
       def install
-        bin.install "mdtohtml"
+        bin.install "mdtohtml_1.1.1_linux_arm64.tar.gz" => "mdtohtml"
       end
     end
   end
