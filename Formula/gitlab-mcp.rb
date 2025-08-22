@@ -5,47 +5,47 @@
 class GitlabMcp < Formula
   desc "A Model Context Protocol (MCP) server that provides GitLab integration tools for Claude Code"
   homepage "https://github.com/sgaunet/gitlab-mcp"
-  version "0.4.1"
+  version "0.4.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/gitlab-mcp/releases/download/v0.4.1/gitlab-mcp_0.4.1_darwin_amd64.tar.gz"
-      sha256 "5c9ac1701a32ffeeb3140fafd3fc6200f0c25c81f06c4b98f75bbbbc5738ceba"
+      url "https://github.com/sgaunet/gitlab-mcp/releases/download/v0.4.2/gitlab-mcp_0.4.2_darwin_amd64.tar.gz"
+      sha256 "ef1b51e8a226c9866c0d12f5444492f69e90b88e0f89f1d7aacfe3d3e94392d7"
 
       def install
-        bin.install "gitlab-mcp_0.4.1_darwin_amd64.tar.gz" => "gitlab-mcp"
+        bin.install "gitlab-mcp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/gitlab-mcp/releases/download/v0.4.1/gitlab-mcp_0.4.1_darwin_arm64.tar.gz"
-      sha256 "d5fbc8d0c5ae6dcd3c7fad7d6d365d84fed8bfac1b754e7c487b8b306079de34"
+      url "https://github.com/sgaunet/gitlab-mcp/releases/download/v0.4.2/gitlab-mcp_0.4.2_darwin_arm64.tar.gz"
+      sha256 "30ad9691c3be5dd480d0714f1cbbf6477ef8badfd3ecf1b30ebf52c2ffb59625"
 
       def install
-        bin.install "gitlab-mcp_0.4.1_darwin_arm64.tar.gz" => "gitlab-mcp"
+        bin.install "gitlab-mcp"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitlab-mcp/releases/download/v0.4.1/gitlab-mcp_0.4.1_linux_amd64.tar.gz"
-      sha256 "15b50eed082d056f7bbd85a0338cbbaf484c0263f21c1d4f2dd68b35564f2eef"
+      url "https://github.com/sgaunet/gitlab-mcp/releases/download/v0.4.2/gitlab-mcp_0.4.2_linux_amd64.tar.gz"
+      sha256 "d0e4e6d65c52aeedd36eb07d88e392ca6af1eb58ef10fb213e1e257bfe415d2b"
       def install
-        bin.install "gitlab-mcp_0.4.1_linux_amd64.tar.gz" => "gitlab-mcp"
+        bin.install "gitlab-mcp"
       end
     end
     if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitlab-mcp/releases/download/v0.4.1/gitlab-mcp_0.4.1_linux_armv6.tar.gz"
-      sha256 "eca11b50820fcba53c0365b20681590a7e01b61c7e6d085637c448c7f26502e9"
+      url "https://github.com/sgaunet/gitlab-mcp/releases/download/v0.4.2/gitlab-mcp_0.4.2_linux_armv6.tar.gz"
+      sha256 "40534918d746d8c791debc86b5a7d0d065e92253e605e029682330872535a852"
       def install
-        bin.install "gitlab-mcp_0.4.1_linux_armv6.tar.gz" => "gitlab-mcp"
+        bin.install "gitlab-mcp"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitlab-mcp/releases/download/v0.4.1/gitlab-mcp_0.4.1_linux_arm64.tar.gz"
-      sha256 "f5bea73bb0dfffe72cf61957587d6d58e2c6e8d46bb90bfb9842a8421e7a2432"
+      url "https://github.com/sgaunet/gitlab-mcp/releases/download/v0.4.2/gitlab-mcp_0.4.2_linux_arm64.tar.gz"
+      sha256 "e55bf7e25e9510afcb1f028eabf1f36f63fa22878513eef6c35c0ef8daee0cee"
       def install
-        bin.install "gitlab-mcp_0.4.1_linux_arm64.tar.gz" => "gitlab-mcp"
+        bin.install "gitlab-mcp"
       end
     end
   end
