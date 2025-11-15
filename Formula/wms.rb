@@ -5,47 +5,47 @@
 class Wms < Formula
   desc ""
   homepage "https://github.com/sgaunet/wms"
-  version "0.4.0"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/wms/releases/download/v0.4.0/wms_0.4.0_darwin_amd64"
-      sha256 "2271396175bea9116e9fa2c97068c1d2152fc436fffef49ec9cd00c8df64fb87"
+      url "https://github.com/sgaunet/wms/releases/download/v0.5.0/wms_0.5.0_darwin_amd64"
+      sha256 "918c98b364b8f2d03dd09127888b13116bba5f7e45b301d33131d9c3eaadb217"
 
       def install
-        bin.install "wms_0.4.0_darwin_amd64" => "wms"
+        bin.install "wms_0.5.0_darwin_amd64" => "wms"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/wms/releases/download/v0.4.0/wms_0.4.0_darwin_arm64"
-      sha256 "9e25c67614db0c77805d1237a2327fe8056c1594604fe6456d8118843ddd410b"
+      url "https://github.com/sgaunet/wms/releases/download/v0.5.0/wms_0.5.0_darwin_arm64"
+      sha256 "843b808649cb76a0232a1961bc4a268feedb9bfc01c039c74f0caa7ea8114038"
 
       def install
-        bin.install "wms_0.4.0_darwin_arm64" => "wms"
+        bin.install "wms_0.5.0_darwin_arm64" => "wms"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/wms/releases/download/v0.4.0/wms_0.4.0_linux_amd64"
-      sha256 "ca6265493462788276f7674153da55d21927d9b8b2456c2a34b5b0f2a06749da"
+      url "https://github.com/sgaunet/wms/releases/download/v0.5.0/wms_0.5.0_linux_amd64"
+      sha256 "af5631b9f5a34637b56aa23b5937a08563b26732459fc076e493203be62e73c6"
       def install
-        bin.install "wms_0.4.0_linux_amd64" => "wms"
+        bin.install "wms_0.5.0_linux_amd64" => "wms"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/wms/releases/download/v0.4.0/wms_0.4.0_linux_armv6"
-      sha256 "8a60d7244eae17385887a22b54bf2b3ddb969dbe1aa87d174fefb87a3c6f726b"
+      url "https://github.com/sgaunet/wms/releases/download/v0.5.0/wms_0.5.0_linux_armv6"
+      sha256 "020285c390b73b296840dd35759719324dc50d76a9b709972fbe4882318ca168"
       def install
-        bin.install "wms_0.4.0_linux_armv6" => "wms"
+        bin.install "wms_0.5.0_linux_armv6" => "wms"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/wms/releases/download/v0.4.0/wms_0.4.0_linux_arm64"
-      sha256 "e7655870e12cc64e828323e751bdcdb2b582531f7bc6dc5a8553be52514296bf"
+      url "https://github.com/sgaunet/wms/releases/download/v0.5.0/wms_0.5.0_linux_arm64"
+      sha256 "edac8d8c3308d6f745d277f34a9d77b34ba9b9d71cca00b5331187b4cd57bddd"
       def install
-        bin.install "wms_0.4.0_linux_arm64" => "wms"
+        bin.install "wms_0.5.0_linux_arm64" => "wms"
       end
     end
   end
