@@ -5,47 +5,47 @@
 class JwtCli < Formula
   desc ""
   homepage "https://github.com/sgaunet/jwt-cli"
-  version "1.3.0"
+  version "1.4.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/jwt-cli/releases/download/v1.3.0/jwt-cli_1.3.0_darwin_amd64"
-      sha256 "4f271b73105556285819ad2f89dc23dd1c25dfd4dd886bb9b4cc8e7a28728aa5"
+      url "https://github.com/sgaunet/jwt-cli/releases/download/v1.4.0/jwt-cli_1.4.0_darwin_amd64"
+      sha256 "637c909b03ea82c34bdb1bedb1d7c954c20e3f317af9583cd397a74176b1f4cb"
 
       def install
-        bin.install "jwt-cli_1.3.0_darwin_amd64" => "jwt-cli"
+        bin.install "jwt-cli_1.4.0_darwin_amd64" => "jwt-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/jwt-cli/releases/download/v1.3.0/jwt-cli_1.3.0_darwin_arm64"
-      sha256 "44409d37c38753e18aca78a4c12e3d3f738bcb5872cb53d3d7b6f216dad3c3a5"
+      url "https://github.com/sgaunet/jwt-cli/releases/download/v1.4.0/jwt-cli_1.4.0_darwin_arm64"
+      sha256 "28a830b353d195c90e38bba466168cdab8ae49f65938c24c520eceb98aa7ff82"
 
       def install
-        bin.install "jwt-cli_1.3.0_darwin_arm64" => "jwt-cli"
+        bin.install "jwt-cli_1.4.0_darwin_arm64" => "jwt-cli"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/jwt-cli/releases/download/v1.3.0/jwt-cli_1.3.0_linux_amd64"
-      sha256 "756d82077eb4ed1e7b803b9382b84f9cf0ea8ce156695e61d14c9d35549fa9a6"
+      url "https://github.com/sgaunet/jwt-cli/releases/download/v1.4.0/jwt-cli_1.4.0_linux_amd64"
+      sha256 "41b902683878dd2793a24292d9ec79b4f05e896790257d341984994314948137"
       def install
-        bin.install "jwt-cli_1.3.0_linux_amd64" => "jwt-cli"
+        bin.install "jwt-cli_1.4.0_linux_amd64" => "jwt-cli"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/jwt-cli/releases/download/v1.3.0/jwt-cli_1.3.0_linux_armv6"
-      sha256 "4e1d5579f70ea2242cbad2e1b3f8a2eff9913ac37e9a0286d8d718e11085e783"
+      url "https://github.com/sgaunet/jwt-cli/releases/download/v1.4.0/jwt-cli_1.4.0_linux_armv6"
+      sha256 "40bcf4ff047b9c9eb8e3ad573c5095386566be66a1d92731e1c1685b7b28bc51"
       def install
-        bin.install "jwt-cli_1.3.0_linux_armv6" => "jwt-cli"
+        bin.install "jwt-cli_1.4.0_linux_armv6" => "jwt-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/jwt-cli/releases/download/v1.3.0/jwt-cli_1.3.0_linux_arm64"
-      sha256 "5bbcbdd98ee5ab8da157aeffdff93ef3ed1713c6dec820a8d0bdd1933d89199c"
+      url "https://github.com/sgaunet/jwt-cli/releases/download/v1.4.0/jwt-cli_1.4.0_linux_arm64"
+      sha256 "176f31e23c112b9727d488077b6bded16968da2ff00b5557b98148cfa5b6e2ed"
       def install
-        bin.install "jwt-cli_1.3.0_linux_arm64" => "jwt-cli"
+        bin.install "jwt-cli_1.4.0_linux_arm64" => "jwt-cli"
       end
     end
   end
