@@ -5,47 +5,47 @@
 class GitlabTokenExpiration < Formula
   desc ""
   homepage "https://github.com/sgaunet/gitlab-token-expiration"
-  version "0.4.0"
+  version "0.4.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/gitlab-token-expiration/releases/download/0.4.0/gitlab-token-expiration_0.4.0_darwin_amd64"
-      sha256 "0550b96d0eb088c0c4274ea16cc66fdbaf54a8bc625f40aa5a047735b6c9a463"
+      url "https://github.com/sgaunet/gitlab-token-expiration/releases/download/0.4.1/gitlab-token-expiration_0.4.1_darwin_amd64"
+      sha256 "c6f51627b75a6ce806142fa0776910ae33b468cdd389e30e41f6f483d4db4bae"
 
       def install
-        bin.install "gitlab-token-expiration_0.4.0_darwin_amd64" => "gitlab-token-expiration"
+        bin.install "gitlab-token-expiration_0.4.1_darwin_amd64" => "gitlab-token-expiration"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/gitlab-token-expiration/releases/download/0.4.0/gitlab-token-expiration_0.4.0_darwin_arm64"
-      sha256 "911edf6f5289a8cd09d9890391e3093efad332be28cd28d569ec6b6106302560"
+      url "https://github.com/sgaunet/gitlab-token-expiration/releases/download/0.4.1/gitlab-token-expiration_0.4.1_darwin_arm64"
+      sha256 "c94a470a6b46d8970e043e399ada8600f6e2e5c0b165fcb103c35a097df1a226"
 
       def install
-        bin.install "gitlab-token-expiration_0.4.0_darwin_arm64" => "gitlab-token-expiration"
+        bin.install "gitlab-token-expiration_0.4.1_darwin_arm64" => "gitlab-token-expiration"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitlab-token-expiration/releases/download/0.4.0/gitlab-token-expiration_0.4.0_linux_amd64"
-      sha256 "b9d17d4a588d4eb4f6121f515a30582fb90d8133a6ae3e64eceee659f970ab64"
+      url "https://github.com/sgaunet/gitlab-token-expiration/releases/download/0.4.1/gitlab-token-expiration_0.4.1_linux_amd64"
+      sha256 "bab09451cfb106ef647a0f50b733a29d0319168002764b50268106b5eda1ed6f"
       def install
-        bin.install "gitlab-token-expiration_0.4.0_linux_amd64" => "gitlab-token-expiration"
+        bin.install "gitlab-token-expiration_0.4.1_linux_amd64" => "gitlab-token-expiration"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitlab-token-expiration/releases/download/0.4.0/gitlab-token-expiration_0.4.0_linux_armv6"
-      sha256 "0cf5a7f3dd0e71b8091b88439687b1ad813a4ada51ba3c81d364dc54b97fd844"
+      url "https://github.com/sgaunet/gitlab-token-expiration/releases/download/0.4.1/gitlab-token-expiration_0.4.1_linux_armv6"
+      sha256 "0cf59d2a6804b4d5b0c4f2f7cd6490cd14743dc3cc5d8f6876708bc6a0fa3606"
       def install
-        bin.install "gitlab-token-expiration_0.4.0_linux_armv6" => "gitlab-token-expiration"
+        bin.install "gitlab-token-expiration_0.4.1_linux_armv6" => "gitlab-token-expiration"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitlab-token-expiration/releases/download/0.4.0/gitlab-token-expiration_0.4.0_linux_arm64"
-      sha256 "f79c321a19df86a443609d3aad5dc744d121e2bb55dbc3a5b26b8115db733970"
+      url "https://github.com/sgaunet/gitlab-token-expiration/releases/download/0.4.1/gitlab-token-expiration_0.4.1_linux_arm64"
+      sha256 "63e74741f70018680ad1c6dd8fc64e6403c8404643985acc3c2bfaf5c57a3245"
       def install
-        bin.install "gitlab-token-expiration_0.4.0_linux_arm64" => "gitlab-token-expiration"
+        bin.install "gitlab-token-expiration_0.4.1_linux_arm64" => "gitlab-token-expiration"
       end
     end
   end
