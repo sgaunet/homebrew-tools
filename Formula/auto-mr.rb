@@ -5,47 +5,47 @@
 class AutoMr < Formula
   desc ""
   homepage "https://github.com/sgaunet/auto-mr"
-  version "0.9.1"
+  version "0.10.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/auto-mr/releases/download/v0.9.1/auto-mr_0.9.1_darwin_amd64"
-      sha256 "45012ed92f6d823eedcc6e28a37d79f13feff8b5fa1d34c497b2fe8e3e06306f"
+      url "https://github.com/sgaunet/auto-mr/releases/download/v0.10.0/auto-mr_0.10.0_darwin_amd64"
+      sha256 "af436688d10f9603eca2c7574b5b8d8ec0b4f7a44114263fba69ab54599b2c66"
 
       def install
-        bin.install "auto-mr_0.9.1_darwin_amd64" => "auto-mr"
+        bin.install "auto-mr_0.10.0_darwin_amd64" => "auto-mr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/auto-mr/releases/download/v0.9.1/auto-mr_0.9.1_darwin_arm64"
-      sha256 "02a4787b08ed1960015a16e2813100e5631d60647eef377c1e1f474ad0bebe2a"
+      url "https://github.com/sgaunet/auto-mr/releases/download/v0.10.0/auto-mr_0.10.0_darwin_arm64"
+      sha256 "aa59a205757b502cb8c006d9baaa52bd2f55f027a73444652e673b3ee1005880"
 
       def install
-        bin.install "auto-mr_0.9.1_darwin_arm64" => "auto-mr"
+        bin.install "auto-mr_0.10.0_darwin_arm64" => "auto-mr"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/auto-mr/releases/download/v0.9.1/auto-mr_0.9.1_linux_amd64"
-      sha256 "b14f622a6293b8634984fa28148f030438853cf705116594612ba5e114787282"
+      url "https://github.com/sgaunet/auto-mr/releases/download/v0.10.0/auto-mr_0.10.0_linux_amd64"
+      sha256 "afbcb42dbfe51fb9175d0e547eef1f99fe658d3b7aec9cec710fc59ca5fe127c"
       def install
-        bin.install "auto-mr_0.9.1_linux_amd64" => "auto-mr"
+        bin.install "auto-mr_0.10.0_linux_amd64" => "auto-mr"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/auto-mr/releases/download/v0.9.1/auto-mr_0.9.1_linux_armv6"
-      sha256 "6072a22c1e1efbefe61594e4730cdc9fdbd072a5868edd5f1ac9cffa6ac8ca32"
+      url "https://github.com/sgaunet/auto-mr/releases/download/v0.10.0/auto-mr_0.10.0_linux_armv6"
+      sha256 "fee7612c54fde854e8328a1e4980f14603b2c94a58f5854b822eef22f8b8adcb"
       def install
-        bin.install "auto-mr_0.9.1_linux_armv6" => "auto-mr"
+        bin.install "auto-mr_0.10.0_linux_armv6" => "auto-mr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/auto-mr/releases/download/v0.9.1/auto-mr_0.9.1_linux_arm64"
-      sha256 "c575ec01730fe2c7fbdb46957c2b97fdabe3737a7f1c6fbe586a2da7f49dc543"
+      url "https://github.com/sgaunet/auto-mr/releases/download/v0.10.0/auto-mr_0.10.0_linux_arm64"
+      sha256 "9e8f1d221f553610cb7ff3515590114f5b35195822b7702d7f969d86051c4805"
       def install
-        bin.install "auto-mr_0.9.1_linux_arm64" => "auto-mr"
+        bin.install "auto-mr_0.10.0_linux_arm64" => "auto-mr"
       end
     end
   end
