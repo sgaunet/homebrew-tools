@@ -3,7 +3,7 @@ cask "gitlab-backup" do
   name "gitlab-backup"
   desc "A tool for backing up GitLab projects"
   homepage "https://github.com/sgaunet/gitlab-backup"
-  version "1.16.3"
+  version "1.17.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,26 +12,26 @@ cask "gitlab-backup" do
   on_macos do
     on_intel do
       url "https://github.com/sgaunet/gitlab-backup/releases/download/v#{version}/gitlab-backup_#{version}_darwin_amd64"
-      sha256 "290f9f46e04459d70d0a08bce6e146c12c8cdde762107b4b2666f4a478324bd3"
-      binary "gitlab-backup_1.16.3_darwin_amd64", target: "gitlab-backup"
+      sha256 "03115549440904fa004203fb8f22ba18a8acca768910157f01119f38c3c0f65e"
+      binary "gitlab-backup_1.17.0_darwin_amd64", target: "gitlab-backup"
     end
     on_arm do
       url "https://github.com/sgaunet/gitlab-backup/releases/download/v#{version}/gitlab-backup_#{version}_darwin_arm64"
-      sha256 "33ee4cdc06642c0bdc0b0c8df00d60ed2af869979591959118919cbe605c82af"
-      binary "gitlab-backup_1.16.3_darwin_arm64", target: "gitlab-backup"
+      sha256 "10d53f9653a6e1edb2574b7d0dc6c121f0764934b7b061e9673b8f504195f120"
+      binary "gitlab-backup_1.17.0_darwin_arm64", target: "gitlab-backup"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/sgaunet/gitlab-backup/releases/download/v#{version}/gitlab-backup_#{version}_linux_amd64"
-      sha256 "88d5ca42fa5651154c93a761648de1697cd2343ef1581ffaa156f370068994dd"
-      binary "gitlab-backup_1.16.3_linux_amd64", target: "gitlab-backup"
+      sha256 "c2495a1265edaa346439f249a4b0608077d1b18dba8fdb068db8666456673d4c"
+      binary "gitlab-backup_1.17.0_linux_amd64", target: "gitlab-backup"
     end
     on_arm do
       url "https://github.com/sgaunet/gitlab-backup/releases/download/v#{version}/gitlab-backup_#{version}_linux_arm64"
-      sha256 "0d7d7155ce66854a356e7e93824cff09495bfc11afa715cae1d93eb7b5f99ac4"
-      binary "gitlab-backup_1.16.3_linux_arm64", target: "gitlab-backup"
+      sha256 "2a3af9cb9ddfabe20d4852dde4c2d09b2fa6e06cf9182526ee289eae142995f4"
+      binary "gitlab-backup_1.17.0_linux_arm64", target: "gitlab-backup"
     end
   end
 
