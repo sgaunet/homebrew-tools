@@ -3,7 +3,7 @@ cask "gitlab-restore" do
   name "gitlab-restore"
   desc "A tool for restoring GitLab projects from backups"
   homepage "https://github.com/sgaunet/gitlab-backup"
-  version "1.17.0"
+  version "1.18.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,26 +12,26 @@ cask "gitlab-restore" do
   on_macos do
     on_intel do
       url "https://github.com/sgaunet/gitlab-backup/releases/download/v#{version}/gitlab-restore_#{version}_darwin_amd64"
-      sha256 "33e0d1039f61433b8f5755a21fec2295ad00572cab5adc9bb676a6e3b986fba0"
-      binary "gitlab-restore_1.17.0_darwin_amd64", target: "gitlab-restore"
+      sha256 "a98dafa7786d0dcee72040bb5f9f43dfaa0b2201436aaa35794fff7942544f5c"
+      binary "gitlab-restore_1.18.0_darwin_amd64", target: "gitlab-restore"
     end
     on_arm do
       url "https://github.com/sgaunet/gitlab-backup/releases/download/v#{version}/gitlab-restore_#{version}_darwin_arm64"
-      sha256 "03dfc581b46c96ef96d505d885d62679406bfc0b605e6252559e46b11cf8d7c0"
-      binary "gitlab-restore_1.17.0_darwin_arm64", target: "gitlab-restore"
+      sha256 "95e81b6cc0cf878b8778113de1344109c524654d6e6a835599878d91b2ae5c51"
+      binary "gitlab-restore_1.18.0_darwin_arm64", target: "gitlab-restore"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/sgaunet/gitlab-backup/releases/download/v#{version}/gitlab-restore_#{version}_linux_amd64"
-      sha256 "c47792b5ffba79bbdc1dd5147fa5cf539c854d887db998f8ed818c0b66d0f871"
-      binary "gitlab-restore_1.17.0_linux_amd64", target: "gitlab-restore"
+      sha256 "554e40a0a777177db1701b55216c4d79f0d540f796363aeca238b402c30e9ef3"
+      binary "gitlab-restore_1.18.0_linux_amd64", target: "gitlab-restore"
     end
     on_arm do
       url "https://github.com/sgaunet/gitlab-backup/releases/download/v#{version}/gitlab-restore_#{version}_linux_arm64"
-      sha256 "2f13a6174077a3f4f2cb2c6ccb11026f6f99b1d77fb116735f10c865b770c928"
-      binary "gitlab-restore_1.17.0_linux_arm64", target: "gitlab-restore"
+      sha256 "ae30456514793d2bff6e831f38f9cafd83f940e166fe5c82860124f0774974c9"
+      binary "gitlab-restore_1.18.0_linux_arm64", target: "gitlab-restore"
     end
   end
 
