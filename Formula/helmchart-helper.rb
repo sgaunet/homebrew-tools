@@ -5,47 +5,47 @@
 class HelmchartHelper < Formula
   desc ""
   homepage "https://github.com/sgaunet/helmchart-helper"
-  version "0.2.2"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/helmchart-helper/releases/download/v0.2.2/helmchart-helper_0.2.2_darwin_amd64"
-      sha256 "09e6628a9bcc9d65ee4bea34162269d30976a434f6553be4be8861c5a5547997"
+      url "https://github.com/sgaunet/helmchart-helper/releases/download/v0.3.0/helmchart-helper_0.3.0_darwin_amd64"
+      sha256 "ef4e1ed9e96f688f4f5990b8d29d799c8551fa81cbe4ec02cee65feb2e3489bf"
 
-      def install
-        bin.install "helmchart-helper_0.2.2_darwin_amd64" => "helmchart-helper"
+      define_method(:install) do
+        bin.install "helmchart-helper_0.3.0_darwin_amd64" => "helmchart-helper"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/helmchart-helper/releases/download/v0.2.2/helmchart-helper_0.2.2_darwin_arm64"
-      sha256 "7729072ff2306510d4bf74dd2b1437151d9b28425a240f375c6453c782e1886f"
+      url "https://github.com/sgaunet/helmchart-helper/releases/download/v0.3.0/helmchart-helper_0.3.0_darwin_arm64"
+      sha256 "952ba26a0ae27d54878bac5e3984d994a735035f7d5f1ba1c8482e9dbb7992bc"
 
-      def install
-        bin.install "helmchart-helper_0.2.2_darwin_arm64" => "helmchart-helper"
+      define_method(:install) do
+        bin.install "helmchart-helper_0.3.0_darwin_arm64" => "helmchart-helper"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/helmchart-helper/releases/download/v0.2.2/helmchart-helper_0.2.2_linux_amd64"
-      sha256 "134ac54e1683518d6ff462cdf7e9310e16e1386f31e5b4c5a3b9bae2f1152b27"
-      def install
-        bin.install "helmchart-helper_0.2.2_linux_amd64" => "helmchart-helper"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sgaunet/helmchart-helper/releases/download/v0.3.0/helmchart-helper_0.3.0_linux_amd64"
+      sha256 "6dfbc7c774036d797d072efa9d0d132269476f75eb373a60fda5f826c0a6b9a4"
+      define_method(:install) do
+        bin.install "helmchart-helper_0.3.0_linux_amd64" => "helmchart-helper"
       end
     end
-    if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/helmchart-helper/releases/download/v0.2.2/helmchart-helper_0.2.2_linux_armv6"
-      sha256 "3df39785722e481b4ddfa2d58fa4f97550b5c674cf3254ae355376393d1d8deb"
-      def install
-        bin.install "helmchart-helper_0.2.2_linux_armv6" => "helmchart-helper"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/sgaunet/helmchart-helper/releases/download/v0.3.0/helmchart-helper_0.3.0_linux_armv6"
+      sha256 "ace0a1eda3360c3f3d3972ca761a6f13f44540519f20fa6f1fa00dd66be9a8b0"
+      define_method(:install) do
+        bin.install "helmchart-helper_0.3.0_linux_armv6" => "helmchart-helper"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/helmchart-helper/releases/download/v0.2.2/helmchart-helper_0.2.2_linux_arm64"
-      sha256 "3a8f7df2a4082e490d9ce2003d79c2a674a5d3d7bbfd3c784fee6b8af805b319"
-      def install
-        bin.install "helmchart-helper_0.2.2_linux_arm64" => "helmchart-helper"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sgaunet/helmchart-helper/releases/download/v0.3.0/helmchart-helper_0.3.0_linux_arm64"
+      sha256 "7c440fa655e9fc48ff0384bd6a7831d405b6361b98b11461c406877bca44a08c"
+      define_method(:install) do
+        bin.install "helmchart-helper_0.3.0_linux_arm64" => "helmchart-helper"
       end
     end
   end
