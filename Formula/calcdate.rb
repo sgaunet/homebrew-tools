@@ -5,15 +5,16 @@
 class Calcdate < Formula
   desc "A modern command-line utility for date calculations and operations with intuitive expression syntax"
   homepage "https://github.com/sgaunet/calcdate"
-  version "2.1.0"
+  version "2.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/calcdate/releases/download/v2.1.0/calcdate_2.1.0_darwin_amd64"
-      sha256 "96c5fda8046ae1d46d795448756b75f4f7caf06e655d8f043b266548b1c64637"
+      url "https://github.com/sgaunet/calcdate/releases/download/v2.1.1/calcdate_2.1.1_darwin_amd64"
+      sha256 "e7c8eae8f8cb80dc8561dc4d9bc7ba1de4bdfa36934755bd4fdbf09ea966708b"
 
       define_method(:install) do
-        bin.install "calcdate_2.1.0_darwin_amd64" => "calcdate"
+        bin.install "calcdate_2.1.1_darwin_amd64" => "calcdate"
+        chmod 0555, bin/"calcdate"
         output = Utils.safe_popen_read(bin/"calcdate", "completion", "bash")
         (bash_completion/"calcdate").write output
         output = Utils.safe_popen_read(bin/"calcdate", "completion", "zsh")
@@ -23,11 +24,12 @@ class Calcdate < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/calcdate/releases/download/v2.1.0/calcdate_2.1.0_darwin_arm64"
-      sha256 "b744ae3d5bf4b4bb4f359de10f452c741a58e0043ec75e23bd3b1dd024f671de"
+      url "https://github.com/sgaunet/calcdate/releases/download/v2.1.1/calcdate_2.1.1_darwin_arm64"
+      sha256 "058c566ecbf88565cb37291acbd9718b65a1ef0598d48780221b1fb6cc3f2a36"
 
       define_method(:install) do
-        bin.install "calcdate_2.1.0_darwin_arm64" => "calcdate"
+        bin.install "calcdate_2.1.1_darwin_arm64" => "calcdate"
+        chmod 0555, bin/"calcdate"
         output = Utils.safe_popen_read(bin/"calcdate", "completion", "bash")
         (bash_completion/"calcdate").write output
         output = Utils.safe_popen_read(bin/"calcdate", "completion", "zsh")
@@ -40,10 +42,11 @@ class Calcdate < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/calcdate/releases/download/v2.1.0/calcdate_2.1.0_linux_amd64"
-      sha256 "de33ad95d34f36977f6d20185da9e935b6fefa20a60af9389b359370e6c4b976"
+      url "https://github.com/sgaunet/calcdate/releases/download/v2.1.1/calcdate_2.1.1_linux_amd64"
+      sha256 "8d3f8c7de0d1a1e8b4d881f60edc6671b18b45547d7f7b486387083b1dad08df"
       define_method(:install) do
-        bin.install "calcdate_2.1.0_linux_amd64" => "calcdate"
+        bin.install "calcdate_2.1.1_linux_amd64" => "calcdate"
+        chmod 0555, bin/"calcdate"
         output = Utils.safe_popen_read(bin/"calcdate", "completion", "bash")
         (bash_completion/"calcdate").write output
         output = Utils.safe_popen_read(bin/"calcdate", "completion", "zsh")
@@ -53,10 +56,11 @@ class Calcdate < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/calcdate/releases/download/v2.1.0/calcdate_2.1.0_linux_armv6"
-      sha256 "dedbcac602de1bb442a882a846153911be983b359c2e3871d654ec08ff5953ed"
+      url "https://github.com/sgaunet/calcdate/releases/download/v2.1.1/calcdate_2.1.1_linux_armv6"
+      sha256 "a8c26623cbcac0fb9a3509832304a481b493cd6795a42502f01ddab7e661f29e"
       define_method(:install) do
-        bin.install "calcdate_2.1.0_linux_armv6" => "calcdate"
+        bin.install "calcdate_2.1.1_linux_armv6" => "calcdate"
+        chmod 0555, bin/"calcdate"
         output = Utils.safe_popen_read(bin/"calcdate", "completion", "bash")
         (bash_completion/"calcdate").write output
         output = Utils.safe_popen_read(bin/"calcdate", "completion", "zsh")
@@ -66,10 +70,11 @@ class Calcdate < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/calcdate/releases/download/v2.1.0/calcdate_2.1.0_linux_arm64"
-      sha256 "fbe1922f0a23d06232f9d711b12eea65ea069fa094480739a51be04a7598c91c"
+      url "https://github.com/sgaunet/calcdate/releases/download/v2.1.1/calcdate_2.1.1_linux_arm64"
+      sha256 "34a6e520903f010ebed00cab6303a2c40ee8fbab9bfffd082866d1affe28d02a"
       define_method(:install) do
-        bin.install "calcdate_2.1.0_linux_arm64" => "calcdate"
+        bin.install "calcdate_2.1.1_linux_arm64" => "calcdate"
+        chmod 0555, bin/"calcdate"
         output = Utils.safe_popen_read(bin/"calcdate", "completion", "bash")
         (bash_completion/"calcdate").write output
         output = Utils.safe_popen_read(bin/"calcdate", "completion", "zsh")
@@ -81,6 +86,6 @@ class Calcdate < Formula
   end
 
   test do
-    system "#{bin}/calcdate", "--version"
+    system "#{bin}/calcdate", "-v"
   end
 end
