@@ -5,47 +5,47 @@
 class ResticAgeKey < Formula
   desc "A tool for [describe your project]"
   homepage "https://github.com/sgaunet/restic-age-key"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/restic-age-key/releases/download/v0.1.1/restic-age-key_0.1.1_darwin_amd64"
-      sha256 "41096e564731ee31601368c89321c1ca4611f6ac03f34abb856503ffc42e5a1b"
+      url "https://github.com/sgaunet/restic-age-key/releases/download/v0.1.2/restic-age-key_0.1.2_darwin_amd64"
+      sha256 "cd7edd5b3c65840983f34f90767c76667e9d2a081b1ed6ed63689ff0044cac09"
 
       define_method(:install) do
-        bin.install "restic-age-key_0.1.1_darwin_amd64" => "restic-age-key"
+        bin.install "restic-age-key_0.1.2_darwin_amd64" => "restic-age-key"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/restic-age-key/releases/download/v0.1.1/restic-age-key_0.1.1_darwin_arm64"
-      sha256 "c5789147c845ecd6c87cabeb43ba00e1deca813e56357192f35ce4860251c533"
+      url "https://github.com/sgaunet/restic-age-key/releases/download/v0.1.2/restic-age-key_0.1.2_darwin_arm64"
+      sha256 "050af646c6e0f08c77a59ecc52ff9ad1a4d877de987021b7e276ddc621c2f9b4"
 
       define_method(:install) do
-        bin.install "restic-age-key_0.1.1_darwin_arm64" => "restic-age-key"
+        bin.install "restic-age-key_0.1.2_darwin_arm64" => "restic-age-key"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/restic-age-key/releases/download/v0.1.1/restic-age-key_0.1.1_linux_amd64"
-      sha256 "2c18049f5155b5077d86ad66cffc109cc11c83c88392aa05176041d911a5b224"
+      url "https://github.com/sgaunet/restic-age-key/releases/download/v0.1.2/restic-age-key_0.1.2_linux_amd64"
+      sha256 "abaf43f2acf2abfc954bd3e0fea705c9a3691a793c251db5d778e2ce6cfde0de"
       define_method(:install) do
-        bin.install "restic-age-key_0.1.1_linux_amd64" => "restic-age-key"
+        bin.install "restic-age-key_0.1.2_linux_amd64" => "restic-age-key"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/restic-age-key/releases/download/v0.1.1/restic-age-key_0.1.1_linux_armv6"
-      sha256 "0d6558f09c152d1a254d8a2ca58800528e444e344a4a0d34556d8603c8725cad"
+      url "https://github.com/sgaunet/restic-age-key/releases/download/v0.1.2/restic-age-key_0.1.2_linux_armv6"
+      sha256 "a1f9d66ec86a6300d8429ba752ae82fcaf05e74ff163b41f94ba3f38ea30b6a9"
       define_method(:install) do
-        bin.install "restic-age-key_0.1.1_linux_armv6" => "restic-age-key"
+        bin.install "restic-age-key_0.1.2_linux_armv6" => "restic-age-key"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/restic-age-key/releases/download/v0.1.1/restic-age-key_0.1.1_linux_arm64"
-      sha256 "cc64bc681bd96550670626dea73be0084195e3972ea373b49de70f2ef0461191"
+      url "https://github.com/sgaunet/restic-age-key/releases/download/v0.1.2/restic-age-key_0.1.2_linux_arm64"
+      sha256 "7b723d1af4f061a679447fd8e63af29a0df897b182c674d44440ab8ce645cb51"
       define_method(:install) do
-        bin.install "restic-age-key_0.1.1_linux_arm64" => "restic-age-key"
+        bin.install "restic-age-key_0.1.2_linux_arm64" => "restic-age-key"
       end
     end
   end
