@@ -5,40 +5,40 @@
 class Moraine < Formula
   desc "A tool for [describe your project]"
   homepage "https://github.com/sgaunet/moraine"
-  version "0.1.1"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/moraine/releases/download/v0.1.1/moraine_0.1.1_darwin_amd64"
-      sha256 "b90663fef949397197a256d34539105afd6fbc937b17cf1d2441c88da4ddd821"
+      url "https://github.com/sgaunet/moraine/releases/download/v0.2.0/moraine_0.2.0_darwin_amd64"
+      sha256 "6e41ea3791cf217f597abb90609d8dc7e379f3a78bef65db25b48db35895ec4d"
 
       define_method(:install) do
-        bin.install "moraine_0.1.1_darwin_amd64" => "moraine"
+        bin.install "moraine_0.2.0_darwin_amd64" => "moraine"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/moraine/releases/download/v0.1.1/moraine_0.1.1_darwin_arm64"
-      sha256 "d13dcc811835fb29155957605c99253a2873b952448cdf1eb16dabb9a1a77e5d"
+      url "https://github.com/sgaunet/moraine/releases/download/v0.2.0/moraine_0.2.0_darwin_arm64"
+      sha256 "70ade14486752ba309f4c7e2b90d4bed15512707cb6d9d38704bb529bcef6e58"
 
       define_method(:install) do
-        bin.install "moraine_0.1.1_darwin_arm64" => "moraine"
+        bin.install "moraine_0.2.0_darwin_arm64" => "moraine"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/moraine/releases/download/v0.1.1/moraine_0.1.1_linux_amd64"
-      sha256 "fea3bc5d040d6609f34b0aa7dc720f1dc2d097b187f7e57881a7af2ae8c8eca6"
+      url "https://github.com/sgaunet/moraine/releases/download/v0.2.0/moraine_0.2.0_linux_amd64"
+      sha256 "7355e2ba0ee0d002cfc48af70126ad1b8163a8f20266e39cfb7950783c3e2af1"
       define_method(:install) do
-        bin.install "moraine_0.1.1_linux_amd64" => "moraine"
+        bin.install "moraine_0.2.0_linux_amd64" => "moraine"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/moraine/releases/download/v0.1.1/moraine_0.1.1_linux_arm64"
-      sha256 "a6a59406a5a88fb6ea19df57d5f3ee49a0dd9c1818de6e3c967da10756a0b8df"
+      url "https://github.com/sgaunet/moraine/releases/download/v0.2.0/moraine_0.2.0_linux_arm64"
+      sha256 "0314db7af57534c1e4e20c517c5469cb9a6cc392ce782e0c7fd8330856ab59d6"
       define_method(:install) do
-        bin.install "moraine_0.1.1_linux_arm64" => "moraine"
+        bin.install "moraine_0.2.0_linux_arm64" => "moraine"
       end
     end
   end
