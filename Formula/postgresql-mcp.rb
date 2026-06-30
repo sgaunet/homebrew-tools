@@ -5,20 +5,20 @@
 class PostgresqlMcp < Formula
   desc "A Model Context Protocol (MCP) server that provides Postgresql integration tools for MCP clients."
   homepage "https://github.com/sgaunet/postgresql-mcp"
-  version "0.4.1"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/postgresql-mcp/releases/download/v0.4.1/postgresql-mcp_0.4.1_darwin_amd64.tar.gz"
-      sha256 "5e52a8559e782682363e6e9fda52b0afacd94dc6d3758e5952edbb3f0b324520"
+      url "https://github.com/sgaunet/postgresql-mcp/releases/download/v0.5.0/postgresql-mcp_0.5.0_darwin_amd64.tar.gz"
+      sha256 "884e05f4651af7e835e455d2c391a27fd66afd423b68fde3908847745a716608"
 
       define_method(:install) do
         bin.install "postgresql-mcp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/postgresql-mcp/releases/download/v0.4.1/postgresql-mcp_0.4.1_darwin_arm64.tar.gz"
-      sha256 "c48c5f038a0fadaf6607dfcebda718bab29d36150dc1e234923a02bbb3cd72ac"
+      url "https://github.com/sgaunet/postgresql-mcp/releases/download/v0.5.0/postgresql-mcp_0.5.0_darwin_arm64.tar.gz"
+      sha256 "f6e1bd0cf46986d357f6a6013c7243df90b137bb531efd632ffa5eefc5ef169f"
 
       define_method(:install) do
         bin.install "postgresql-mcp"
@@ -28,22 +28,22 @@ class PostgresqlMcp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/postgresql-mcp/releases/download/v0.4.1/postgresql-mcp_0.4.1_linux_amd64.tar.gz"
-      sha256 "904333813ea542112525b9de335168991ca63161cf6d5e2bd0591b8855ced4cd"
+      url "https://github.com/sgaunet/postgresql-mcp/releases/download/v0.5.0/postgresql-mcp_0.5.0_linux_amd64.tar.gz"
+      sha256 "abc4f013b9a07c5a60d7e67f819ff9234df84456da1a8a045f25ad336973a298"
       define_method(:install) do
         bin.install "postgresql-mcp"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/postgresql-mcp/releases/download/v0.4.1/postgresql-mcp_0.4.1_linux_armv6.tar.gz"
-      sha256 "7bfa9db2c48763d19ae886b47e3b03962ece5bdb6585f1f910fa45df8db42cba"
+      url "https://github.com/sgaunet/postgresql-mcp/releases/download/v0.5.0/postgresql-mcp_0.5.0_linux_armv6.tar.gz"
+      sha256 "d64e4b5912b2adb4c8e1e56eea3cc23e73601ce366931e13a3e8b0520bdad26b"
       define_method(:install) do
         bin.install "postgresql-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/postgresql-mcp/releases/download/v0.4.1/postgresql-mcp_0.4.1_linux_arm64.tar.gz"
-      sha256 "22e5798abea6f017e93b0936b43d1cf656dcd6b8267530abd0a5e250ad46eaab"
+      url "https://github.com/sgaunet/postgresql-mcp/releases/download/v0.5.0/postgresql-mcp_0.5.0_linux_arm64.tar.gz"
+      sha256 "558a8faced65deace9d9cf86093337678358dbe58918510efb5da0cd1030c1c0"
       define_method(:install) do
         bin.install "postgresql-mcp"
       end
