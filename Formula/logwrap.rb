@@ -5,47 +5,47 @@
 class Logwrap < Formula
   desc ""
   homepage "https://github.com/sgaunet/logwrap"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/logwrap/releases/download/v0.2.0/logwrap_0.2.0_darwin_amd64"
-      sha256 "c075cbb8fd054d5324e2440b995be0569b3e2663b68a787f9fd0380e69912a25"
+      url "https://github.com/sgaunet/logwrap/releases/download/v0.3.0/logwrap_0.3.0_darwin_amd64"
+      sha256 "7e86d9fa664496e43350ddb957b045eb5ddb1c76ad155d624c28179c213b2902"
 
-      def install
-        bin.install "logwrap_0.2.0_darwin_amd64" => "logwrap"
+      define_method(:install) do
+        bin.install "logwrap_0.3.0_darwin_amd64" => "logwrap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/logwrap/releases/download/v0.2.0/logwrap_0.2.0_darwin_arm64"
-      sha256 "0822d695df3dfcf31eccc360d6cb2e04b31f7ac866e61604c08aa13a6b3366f8"
+      url "https://github.com/sgaunet/logwrap/releases/download/v0.3.0/logwrap_0.3.0_darwin_arm64"
+      sha256 "0366d4cb118911a04b1649056773eff705c1555f31b6b061e7c55d9f38d4ee66"
 
-      def install
-        bin.install "logwrap_0.2.0_darwin_arm64" => "logwrap"
+      define_method(:install) do
+        bin.install "logwrap_0.3.0_darwin_arm64" => "logwrap"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/logwrap/releases/download/v0.2.0/logwrap_0.2.0_linux_amd64"
-      sha256 "70544b4a4a902d771b11e18e697e344719e296ea090501ecd976c1b0d7a9ad4d"
-      def install
-        bin.install "logwrap_0.2.0_linux_amd64" => "logwrap"
+      url "https://github.com/sgaunet/logwrap/releases/download/v0.3.0/logwrap_0.3.0_linux_amd64"
+      sha256 "429646e9db097cdb2bbd5e59229c159dbb50fc2521a156e37d3435865408bd55"
+      define_method(:install) do
+        bin.install "logwrap_0.3.0_linux_amd64" => "logwrap"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/logwrap/releases/download/v0.2.0/logwrap_0.2.0_linux_armv6"
-      sha256 "c040a2af07e00ff70357491a8bdba3a65c3b962f140a54ee9a58ca0c67093150"
-      def install
-        bin.install "logwrap_0.2.0_linux_armv6" => "logwrap"
+      url "https://github.com/sgaunet/logwrap/releases/download/v0.3.0/logwrap_0.3.0_linux_armv6"
+      sha256 "db25e5ee090b62225c938371b1646cd248c1dc68a2d435d82513a0dd7eaea954"
+      define_method(:install) do
+        bin.install "logwrap_0.3.0_linux_armv6" => "logwrap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/logwrap/releases/download/v0.2.0/logwrap_0.2.0_linux_arm64"
-      sha256 "706b77f5d4f239b2e9965f8dc9b22c0fc4cd817274b909e66579bb6b23e18019"
-      def install
-        bin.install "logwrap_0.2.0_linux_arm64" => "logwrap"
+      url "https://github.com/sgaunet/logwrap/releases/download/v0.3.0/logwrap_0.3.0_linux_arm64"
+      sha256 "d48c8a5f11cdd2f8c4a4331f15f2211829e1d9fa331e2659dbe0c26649e3e877"
+      define_method(:install) do
+        bin.install "logwrap_0.3.0_linux_arm64" => "logwrap"
       end
     end
   end
