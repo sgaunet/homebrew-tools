@@ -5,47 +5,47 @@
 class Gitcommit < Formula
   desc ""
   homepage "https://github.com/sgaunet/gitcommit"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sgaunet/gitcommit/releases/download/v0.1.0/gitcommit_0.1.0_darwin_amd64"
-      sha256 "4a466b5f79fe6422beb51c95167ef977e84c2cf53042473b634dc9228f3190a2"
+      url "https://github.com/sgaunet/gitcommit/releases/download/v0.1.1/gitcommit_0.1.1_darwin_amd64"
+      sha256 "fa6d4e406cd0ee1e137bf8f136c8063ea6802238435c81d59c8c0c57ffedef51"
 
-      def install
-        bin.install "gitcommit_0.1.0_darwin_amd64" => "gitcommit"
+      define_method(:install) do
+        bin.install "gitcommit_0.1.1_darwin_amd64" => "gitcommit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sgaunet/gitcommit/releases/download/v0.1.0/gitcommit_0.1.0_darwin_arm64"
-      sha256 "b65836914e4eb33b11d2d62ed350ce33b00323752bf6a011069827c132bd842a"
+      url "https://github.com/sgaunet/gitcommit/releases/download/v0.1.1/gitcommit_0.1.1_darwin_arm64"
+      sha256 "4bdf68e1868881e2d65bb902b88c1a0a8b6ae3ca09e536a32e6029c98f084da4"
 
-      def install
-        bin.install "gitcommit_0.1.0_darwin_arm64" => "gitcommit"
+      define_method(:install) do
+        bin.install "gitcommit_0.1.1_darwin_arm64" => "gitcommit"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitcommit/releases/download/v0.1.0/gitcommit_0.1.0_linux_amd64"
-      sha256 "76df02e78145fd687a0e367a3c012c87f53130c81abdac0a32e7be93bbfd5fb2"
-      def install
-        bin.install "gitcommit_0.1.0_linux_amd64" => "gitcommit"
+      url "https://github.com/sgaunet/gitcommit/releases/download/v0.1.1/gitcommit_0.1.1_linux_amd64"
+      sha256 "83428218d2ef8b9a5b4f1021d437c54a1ac9a2b6677d8c7299ff37577c813369"
+      define_method(:install) do
+        bin.install "gitcommit_0.1.1_linux_amd64" => "gitcommit"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitcommit/releases/download/v0.1.0/gitcommit_0.1.0_linux_armv6"
-      sha256 "44f14eb0e0fbd55793a32b42b56a75da2b5ee17a90d17fc2bd6004e276869bce"
-      def install
-        bin.install "gitcommit_0.1.0_linux_armv6" => "gitcommit"
+      url "https://github.com/sgaunet/gitcommit/releases/download/v0.1.1/gitcommit_0.1.1_linux_armv6"
+      sha256 "b86e86cde21dfdb7f77a37f38dd3b0ba4ab9dbfa2ef4c70075ac9d57771eaab1"
+      define_method(:install) do
+        bin.install "gitcommit_0.1.1_linux_armv6" => "gitcommit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sgaunet/gitcommit/releases/download/v0.1.0/gitcommit_0.1.0_linux_arm64"
-      sha256 "c63ed639bdafe8e7e353885628c9e7fd5119c4d20a2c438554ee6e815cb5ffc3"
-      def install
-        bin.install "gitcommit_0.1.0_linux_arm64" => "gitcommit"
+      url "https://github.com/sgaunet/gitcommit/releases/download/v0.1.1/gitcommit_0.1.1_linux_arm64"
+      sha256 "c243f1c955ab87b4c2e2d6cbfeb467245afcf29651d0f9819ed9db49a053ffe5"
+      define_method(:install) do
+        bin.install "gitcommit_0.1.1_linux_arm64" => "gitcommit"
       end
     end
   end
