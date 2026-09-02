@@ -1,6 +1,19 @@
 {
+  "auto-mr": "auto-mr",
+  "calcdate": "calcdate",
+  "dsn": "dsn",
+  "gini": "gini",
+  "gitcommit": "gitcommit",
   "gitlab-backup": "gitlab-backup",
+  "gitlab-mcp": "gitlab-mcp",
+  "gitlab-token-expiration": "gitlab-token-expiration",
+  "gocrypt": "gocrypt",
+  "helmchart-helper": "helmchart-helper",
   "jwt-cli": "jwt-cli",
+  "logwrap": "logwrap",
+  "mdtohtml": "mdtohtml",
   "moraine": "moraine",
-  "pplx": "pplx"
+  "pplx": "pplx",
+  "postgresql-mcp": "postgresql-mcp",
+  "restic-age-key": "restic-age-key"
 }
