@@ -125,16 +125,3 @@ Install :
 ```
 brew install pplx
 ```
-
-### wms (v0.3.0)
-
-WMS (Web Map Service) command-line client for fetching map tiles.
-
-[source code here](https://github.com/sgaunet/wms)
-
-Install : 
-
-```
-brew install wms
-```
-
